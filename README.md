@@ -1,29 +1,25 @@
-# m291
+# M291
 
-This template should help get you started developing with Vue 3 in Vite.
+Eine kurze Beschreibung des Projekts und dessen Zweck.
 
-## Recommended IDE Setup
+## Inhaltsverzeichnis
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Ausgangslage](#ausgangslage)
+- [Projektbeschreibung](#projektbeschreibung)
+- [Testing](#testing)
+- [Fazit](#fazit)
 
-## Customize configuration
+## Ausgangslage
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Dies war unser (Serainas) Kentniss vor diesem Modul:
 
-## Project Setup
+```bash
+# Beispielbefehle
+<!DOCTYPE html>
+<html lang="en">
 
-```sh
-npm install
 ```
+Und dies nach dem Modul:
 
-### Compile and Hot-Reload for Development
+![Beschreibung des GIFs](https://media1.tenor.com/m/IpT37hF7X0YAAAAd/you-didnt-have-to-cut-me-off-meme-you-didnt-have-to-cut-me-off.gif)
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
