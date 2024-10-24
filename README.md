@@ -1,29 +1,59 @@
-# m291
+# M291
+<img align="right" alt="Coding" width="400" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif">
+<br>
+<br>
+Wir haben gelernt das Vue doch nicht so einfach ist wie gesagt wurde. <br>
+Wir konnten unsere html, css und javascript Horizonte erweitern <br>
+und Vue versuchen zu verstehen. <br>
+Alles in allem konnten wir viel lernen,
+weinen, lachen und schreien. <br>
+Aber am Schluss ist alles gut gekommen.
+<br>
+<br>
+<br>
+<br>
+<br>
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Inhaltsverzeichnis
 
-## Customize configuration
+- [Ausgangslage](#ausgangslage)
+- [Projektbeschreibung](#projektbeschreibung)
+- [Steps](#steps)
+- [Testing](#testing)
+- [Probleme](#probleme)
+- [Fazit](#fazit)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Ausgangslage
 
-## Project Setup
+Dies war unser (Serainas) Kentniss vor diesem Modul:
 
-```sh
-npm install
+```bash
+# Beispielbefehle
+<!DOCTYPE html>
+<html lang="en">
+
 ```
+Und dies nach dem Modul:
 
-### Compile and Hot-Reload for Development
+![boom](src/assets/gif.gif)
 
-```sh
-npm run dev
-```
+## Projektbeschreibung
 
-### Compile and Minify for Production
+Für dieses Modul haben wir uns entschieden eine Wesbite zum Thema Stunden und Auszahlung zu machen. Dazu haben wir API's von der SBW verwendet, um Daten von Projekten und Schülern ohne viel Aufwand direkt zu erreichen.
 
-```sh
-npm run build
-```
+## Steps
+Wir aben als erstes unsere Ideen auf Blatt Papier gescribbelt und danach in Figma unser Mockup erstellt. Wir haben viel gelernt was das Ui/UX Design angeht und versucht die Site so User freundlioch wie möglich zu machen.
+![Figma Mockup](src/assets/Figma-Mockup.png)
+
+## Testing
+
+(https://validator.w3.org![image](https://github.com/user-attachments/assets/e8785df7-c5bc-4cad-9e38-f5063bfe4d4a) Fotos davon hochladen
+
+## Probleme
+Wir hatten Probleme mit;
+
+## Fazit
+
+Fazit Hier
