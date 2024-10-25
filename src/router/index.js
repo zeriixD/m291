@@ -1,23 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import LPView from '/src/views/LPView.vue'
+import CoachView from '/src/views/CoachView.vue'
+import SignupView from '/src/views/SignupView.vue'
+
+const routes = [
+  { path: '/', component: SignupView },
+  { path: '/lp', component: LPView },
+  { path: '/coach', component: CoachView },
+]
+
+// const currentPath = ref(window.location.hash)
+
+// window.addEventListener('hashchange', () => {
+//   currentPath.value = window.location.hash
+// })
+
+// const currentView = computed(() => {
+//   return routes[currentPath.value.slice(1) || '/']
+// })
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
+  history: createWebHistory(),
+  routes
 })
 
 export default router
