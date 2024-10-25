@@ -6,10 +6,10 @@
     <div id="name-input">
       <h1>M291 <br> Stunden und Absenzen</h1>
       <p class="text-white">von KLc und SZu</p>
-      <input type="text" v-model="username" placeholder="Wie heisst du?"><br>
+      <input type="text" v-model="username" v-on:keypress.enter="signIn()" placeholder="Wie heisst du?"><br>
     </div>
 
-    <div v-if="username" id="role-input">
+    <div v-if="validUsername === true" id="role-input">
       <h1>Hallo {{ username }}!</h1>
       <p>Wähle deine Rolle</p>
       <button v-on:click="assignRole('LP')">Lernpartner</button>
@@ -23,14 +23,13 @@ export default {
   data() {
     return {
       username: '',
+      lpNames: [],
       signedUp: false,
-      usernameExists: false,
+      error: '',
+      validUsername: false
     }
   },
   methods: {
-    signIn() {
-      this.signedUp = true
-    },
     assignRole(role) {
       if (role === 'LP') {
         this.$router.push('/lp')
@@ -38,26 +37,29 @@ export default {
         this.$router.push('/coach')
       }
     },
-    fetchUsers() {
+    fetchUsernames() {
       fetch('https://api-sbw-plc.sbw.media/Student')
         .then(response => response.json())
         .then(data => {
-          this.users = data.resources.map(lp => ({
-            ...lp,
-            totalHours: 0,
-            projects: [],
-          }))
+          this.lpNames = data.resources.map(lp => lp.fullname)
         })
+        .catch(error => console.error('Error fetching LP names:', error))
     },
-    checkUsername(lpID, lpName, userID) {
-      const validName = this.users.find(user => user.ID === userID)
-
-      if (validName) {
-        
+    signIn() {
+      if (this.lpNames.includes(this.username)) {
+        this.validUsername = true
+        this.error = ''
+        localStorage.setItem('username', this.username)
+      } else {
+        this.error = 'Ungültiger Name. Gib bitte deinen Vollständigen Namen ein. L.'
+        alert(this.error)
       }
-    }
+    },
+  },
+  mounted() {
+    this.fetchUsernames()
   }
-  }
+}
 </script>
 
 <style>

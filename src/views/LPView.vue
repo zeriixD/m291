@@ -6,10 +6,10 @@
         <nav>
             <ul>
                 <li>
-                    <p>Projekte</p>
+                    <a href="">Projekte</a>
                 </li>
                 <li>
-                    <p>Zeiterfassung</p>
+                    <a href="">Zeiterfassung</a>
                 </li>
             </ul>
         </nav>
@@ -120,6 +120,11 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
 }
 
 main {
