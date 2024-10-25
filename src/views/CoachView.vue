@@ -5,8 +5,8 @@
         </div>
         <nav>
             <ul>
-                <li v-on:click="currentView === 'Proj'">Projekte</li>
-                <li v-on:click="currentView === 'LP'">Auslastung</li>
+                <li><p v-on:click="currentView = 'Proj'">Projekte</p></li>
+                <li><p v-on:click="currentView = 'LP'">Auslastung</p></li>
             </ul>
         </nav>
     </header>
