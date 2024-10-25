@@ -1,11 +1,11 @@
 <template>
-    <header>
+    <header id="coach-header" >
         <div class="logo">
             <img src="/src/assets/logo.svg" alt="logo-sbw">
         </div>
         <nav>
             <ul>
-                <li><p v-on:click="currentView = 'Proj'">Projekte</p></li>
+                <li id="projekte-notfall"><p v-on:click="currentView = 'Proj'">Projekte</p></li>
                 <li><p v-on:click="currentView = 'LP'">Auslastung</p></li>
             </ul>
         </nav>
@@ -178,12 +178,27 @@ export default {
 </script>
 
 <style>
+#coach-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+
+#projekte-notfall {
+margin-left: 25rem;
+}
 
 #total-hours {
     color: #582CAF;
     font-size: 2rem;
     font-weight: 900;
-    margin-top: -2.5rem;
+    
 }
 h4 {
     color: #582CAF;
