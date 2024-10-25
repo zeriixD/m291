@@ -54,9 +54,9 @@ Als wir mit dem Coden vom Html und Css fertig waren haben wir diese mit dem Vali
 
 
 ## Probleme
-Wir hatten Probleme mit Vue, daher wir es nicht gut kannten und sich rausgestellt hat das es doch nicht so einfach war wie es angepriesen wurde, hatten wir Schwierigkeiten all dies in dieser kurzen Zeit, zu programmieren.
+Das Grösste Problem war es die vorprogrammierten Html und Css Dateien mit Vue so zu vereinen, dass das Css stimmt. Ich (Seraina) hatte im Vorhinein das Html und Css programmiert, währenddessen hatte Kevin mit Vue angefangen. Immer als ich mit einer Seite Html fertig war, wandelte er diese in Vue um. Wir waren sehr unerfahren und dachten dieser Weg wäre einfach und gut zum zusammenarbeiten, aber das Css hat so oft nicht mit dem neuen Code übereingepasst das die gesamte Arbeit von mir nutzlos war. Am Ende haben wir es geschafft irgendwie zu integrieren, aber wir mussten viel von unserem Code weglassen und die Website anders gestalten, Funktionen und Design Elemente entfernen
 
 
 ## Fazit
 
-Alles in allem konnten wir viel lernen und 
+Wir programmieren nie wieder mit Vue.
