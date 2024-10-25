@@ -47,11 +47,10 @@ Für dieses Modul haben wir uns entschieden eine Wesbite zum Thema Stunden und A
 Wir aben als erstes unsere Ideen auf Blatt Papier gescribbelt und danach in Figma unser Mockup erstellt. Wir haben viel gelernt was das Ui/UX Design angeht und versucht die Site so User freundlioch wie möglich zu machen.
 ![Figma Mockup](src/assets/Figma-Mockup.png)
 Als wir mit dem Coden vom Html und Css fertig waren haben wir diese mit dem Validator geprüft:
-![Validator](src/assets/validator)
 
 ## Testing
 
-
+![Validator](src/assets/validator2.png)
 
 ## Probleme
 Das Grösste Problem war es die vorprogrammierten Html und Css Dateien mit Vue so zu vereinen, dass das Css stimmt. Ich (Seraina) hatte im Vorhinein das Html und Css programmiert, währenddessen hatte Kevin mit Vue angefangen. Immer als ich mit einer Seite Html fertig war, wandelte er diese in Vue um. Wir waren sehr unerfahren und dachten dieser Weg wäre einfach und gut zum zusammenarbeiten, aber das Css hat so oft nicht mit dem neuen Code übereingepasst das die gesamte Arbeit von mir nutzlos war. Am Ende haben wir es geschafft irgendwie zu integrieren, aber wir mussten viel von unserem Code weglassen und die Website anders gestalten, Funktionen und Design Elemente entfernen.
