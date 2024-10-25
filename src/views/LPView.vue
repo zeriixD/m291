@@ -55,7 +55,7 @@
                         <h1>{{ selectedProject.lpHours }}h</h1>
                         <p>deine Stunden</p>
                         <br>
-                        <h1>{{ selectedProject.lpVerifiedHours }}h</h1>
+                        <h1 id="verifiedhours-text">{{ selectedProject.lpVerifiedHours }}h</h1>
                         <p>davon Bestätigt</p>
                     </div>
                 </div>
@@ -184,13 +184,13 @@ li p {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    padding-top: 50px; /* Abstand vom Header */
 }
 
 .header-section {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: center;
     align-items: flex-start;
     width: 100%;
     background-color: #fff;
@@ -199,31 +199,50 @@ li p {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
-    width: 700px;
-    color: #333;
+    max-width: 900px; /* Adjusted width */
 }
 
 .header-section h2 {
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: left;
+    font-size: 1.5rem; /* Reduced size for clarity */
     font-weight: 900;
     color: #582CAF;
+    text-align: left;
 }
-
 #hours-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-left: auto;
+    text-align: right;
+}
+
+#hours-container h1 {
+    color: #582CAF;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#verifiedhours-text {
+    color: green;
+    font-size: 2rem;
+    margin: 0;
 }
 
 #hours-container p {
     margin-top: 0;
+    font-size: 1rem;
+    color: #333;
 }
 
 #proj-desc {
-    max-width: 500px;
+    max-width: 600px;
+    text-align: left;
 }
+
+#proj-desc p {
+    color: black; /* Sichtbare Farbe für den Text */
+    font-size: 1.1rem; /* Angepasste Schriftgröße */
+    margin-top: 10px; /* Abstand über dem Text */
+}
+
 </style>
