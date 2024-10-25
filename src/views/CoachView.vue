@@ -37,13 +37,13 @@
                         <h1 id="total-hours">{{ selectedProject.totalHours }}h</h1>
                         <p id="proj-desc">Platzhaltertext für Kurzbeschreibung dieses Projekts</p>
     
-                        <h2>Coach</h2>
+                        <h4>Coach</h4>
                         <div id="coach-info">
                             <img class="avatar" src="/src/assets/avatar/avatar3.svg" alt="pfp-coach">
                             <span>{{ selectedProject.Coach }}</span>
                         </div>
     
-                        <h2>Mitglieder</h2>
+                        <h4>Mitglieder</h4>
                         <div id="members-table">
                             <div id="member" v-for="collaborator in selectedProject.collaborators"
                                 :key="collaborator.lpID">
@@ -175,6 +175,17 @@ export default {
 </script>
 
 <style>
+
+#total-hours {
+    color: #582CAF;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: -2.5rem;
+}
+h4 {
+    color: #582CAF;
+    font-weight: 600;
+}
 #coach-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
