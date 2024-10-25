@@ -20,6 +20,7 @@
             <h1>Deine Projekte</h1>
             <p>Klicke auf das + um einem Projekt beizutreten. Du kannst aus dem Projektteam über das - auch wieder
                 austreten.</p>
+
         </div>
         <div id="lp-grid" v-if="!selectedProject">
             <div id="lp-card" v-for="project in projects" :key="project.ID">
@@ -49,14 +50,14 @@
                         <button v-on:click="submitHours(selectedProject.ID)" class="submit">Abschicken</button>
                     </div>
                     <div id="hours-container">
-                        <h1>{{ selectedProject.totalHours }}h</h1>
-                        <p>insgesamt geleistet</p>
+                        <h1 id="total-hours" >{{ selectedProject.totalHours }}h</h1>
+                        <p id="hours-info">insgesamt geleistet</p>
                         <br>
-                        <h1>{{ selectedProject.lpHours }}h</h1>
-                        <p>deine Stunden</p>
+                        <h1 id="total-hours">{{ selectedProject.lpHours }}h</h1>
+                        <p id="hours-info">deine Stunden</p>
                         <br>
-                        <h1 id="verifiedhours-text">{{ selectedProject.lpVerifiedHours }}h</h1>
-                        <p>davon Bestätigt</p>
+                        <h1 id="total-hours-accepted">{{ selectedProject.lpVerifiedHours }}h</h1>
+                        <p >davon Bestätigt</p>
                     </div>
                 </div>
             </div>
@@ -109,6 +110,7 @@ export default {
 </script>
 
 <style>
+
 header {
     display: flex;
     justify-content: space-between;
@@ -130,11 +132,10 @@ a {
 
 main {
     margin-top: 250px;
-    padding: 325px;
+    padding: 325px;  /* Das Padding ist hier extrem hoch */
     text-align: center;
     height: 100vh;
 }
-
 nav ul {
     color: black;
     display: flex;
@@ -190,52 +191,58 @@ li p {
     padding-top: 50px; /* Abstand vom Header */
 }
 
+#verifiedhours-text {
+    color: green !important;
+    font-size: 2rem;
+    margin: 0;
+}
 .header-section {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center; 
     width: 100%;
+    max-width: 800px;
     background-color: #fff;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    text-align: center;
-    max-width: 900px; /* Adjusted width */
+    text-align: left;
 }
 
-.header-section h2 {
-    font-size: 1.5rem; /* Reduced size for clarity */
-    font-weight: 900;
-    color: #582CAF;
-    text-align: left;
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Wichtig für die vertikale Ausrichtung */
+    flex-direction: row;
+    padding: 20px;
 }
 #hours-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: auto;
-    text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+
 }
 
-#hours-container h1 {
+#total-hours {
     color: #582CAF;
     font-size: 2rem;
     margin: 0;
+    margin-left: 40rem;
 }
 
-#verifiedhours-text {
-    color: green;
+#total-hours-accepted {
+    color: #35CF77;
     font-size: 2rem;
     margin: 0;
 }
-
 #hours-container p {
     margin-top: 0;
     font-size: 1rem;
     color: #333;
 }
+
 
 #proj-desc {
     max-width: 600px;
@@ -246,6 +253,8 @@ li p {
     color: black; /* Sichtbare Farbe für den Text */
     font-size: 1.1rem; /* Angepasste Schriftgröße */
     margin-top: 10px; /* Abstand über dem Text */
+    max-width: auto;
 }
+
 
 </style>
