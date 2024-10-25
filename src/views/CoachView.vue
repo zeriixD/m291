@@ -11,7 +11,7 @@
         </nav>
     </header>
 
-    <body>
+    <main>
         <div v-if="currentView === 'Proj'">
             <h1>Aktuell laufende Projekte</h1>
             <p>Hier werden laufende Projekte angezeigt. Um mehr über ein Projekt zu erfahren, klicke auf "Details"!</p>
@@ -33,27 +33,27 @@
             <div v-if="selectedProject" id="coach-details">
                 <div id="project-box">
                     <div class="header-section">
-                        <h2>{{ selectedProject.Name }}</h2>
-                        <h1>{{ selectedProject.totalHours }}</h1>
-                    </div>
-                    <p>Platzhaltertext für Kurzbeschreibung dieses Projekts</p>
-
-                    <h2>Coach</h2>
-                    <div id="coach-info">
-                        <img src="/src/assets/avatar/avatar3.svg" alt="pfp-coach">
-                        <span>{{ selectedProject.Coach }}</span>
-                    </div>
-
-                    <h2>Mitglieder</h2>
-                    <div id="members-table">
-                        <div id="member" v-for="collaborator in selectedProject.collaborators"
-                            :key="collaborator.lpID">
-                            <img src="/src/assets/avatar/avatar1.svg" alt="pfp-lp">
-                            <span>{{ collaborator.name }}</span>
-                            <span>{{ collaborator.hoursWorked }}</span>
-                            <button id="verify"
-                                v-on:click="verifyHours(selectedProject.ID, collaborator.lpID)">Bestätigen</button>
-                            <button id="reject" v-on:click="rejectHours()">Ablehnen</button>
+                        <h2 id="project-title">{{ selectedProject.Name }}</h2>
+                        <h1 id="total-hours">{{ selectedProject.totalHours }}h</h1>
+                        <p id="proj-desc">Platzhaltertext für Kurzbeschreibung dieses Projekts</p>
+    
+                        <h2>Coach</h2>
+                        <div id="coach-info">
+                            <img class="avatar" src="/src/assets/avatar/avatar3.svg" alt="pfp-coach">
+                            <span>{{ selectedProject.Coach }}</span>
+                        </div>
+    
+                        <h2>Mitglieder</h2>
+                        <div id="members-table">
+                            <div id="member" v-for="collaborator in selectedProject.collaborators"
+                                :key="collaborator.lpID">
+                                <img class="avatar" src="/src/assets/avatar/avatar1.svg" alt="pfp-lp">
+                                <span id="member-name">{{ collaborator.name }}</span>
+                                <span id="member-hours">{{ collaborator.hoursWorked }}h</span>
+                                <button id="verify"
+                                    v-on:click="verifyHours(selectedProject.ID, collaborator.lpID)">Bestätigen</button>
+                                <button id="reject" v-on:click="rejectHours()">Ablehnen</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </main>
 </template>
 
 <script>
@@ -173,3 +173,119 @@ export default {
     }
 }
 </script>
+
+<style>
+#coach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#coach-card {
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#coach-card h2 {
+    margin-top: 0;
+    color: #582CAF;
+    font-weight: 400;
+}
+
+#coach-card h1 {
+    margin-bottom: 5px;
+}
+
+#project-title {
+    font-size: 2rem;
+    color: #582CAF;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+#project-box {
+    background-color: #7E57C2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 700px;
+    color: #333;
+}
+
+.header-section h2 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: 900;
+    color: #582CAF;
+}
+
+#coach-info {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#members-table {
+    margin-top: 3rem;
+}
+
+#member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#coach-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#member-name {
+    flex: 1;
+    margin-left: 1rem;
+    color: #333;
+}
+
+#member-hours {
+    color: #666;
+    margin-top: 0.3rem;
+    margin-right: 1.5rem;
+}
+
+.coach-info img {
+    width: 50px;
+    height: 50px;
+}
+</style>

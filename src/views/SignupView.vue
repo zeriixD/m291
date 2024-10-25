@@ -49,17 +49,11 @@ export default {
           }))
         })
     },
-    checkUsername(lpID, lpName, projectID) {
-      const project = this.projects.find(p => p.ID === projectID)
-      const existingCollaborator = project.collaborators.find(collab => collab.lpID === lpID)
+    checkUsername(lpID, lpName, userID) {
+      const validName = this.users.find(user => user.ID === userID)
 
-      if (!existingCollaborator) {
-        project.collaborators.push({
-          lpID: lpID,
-          name: lpName,
-          hoursWorked: 0,
-          verifiedHours: 0
-        })
+      if (validName) {
+        
       }
     }
   }
