@@ -46,14 +46,17 @@ Für dieses Modul haben wir uns entschieden eine Wesbite zum Thema Stunden und A
 ## Steps
 Wir aben als erstes unsere Ideen auf Blatt Papier gescribbelt und danach in Figma unser Mockup erstellt. Wir haben viel gelernt was das Ui/UX Design angeht und versucht die Site so User freundlioch wie möglich zu machen.
 ![Figma Mockup](src/assets/Figma-Mockup.png)
+Als wir mit dem Coden vom Html und Css fertig waren haben wir diese mit dem Validator geprüft:
+![Validator](src/assets/validator)
 
 ## Testing
 
-(https://validator.w3.org![image](https://github.com/user-attachments/assets/e8785df7-c5bc-4cad-9e38-f5063bfe4d4a) Fotos davon hochladen
+
 
 ## Probleme
-Wir hatten Probleme mit;
+Wir hatten Probleme mit Vue, daher wir es nicht gut kannten und sich rausgestellt hat das es doch nicht so einfach war wie es angepriesen wurde, hatten wir Schwierigkeiten all dies in dieser kurzen Zeit, zu programmieren.
+
 
 ## Fazit
 
-Fazit Hier
+Alles in allem konnten wir viel lernen und 
