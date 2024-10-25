@@ -46,14 +46,20 @@ Für dieses Modul haben wir uns entschieden eine Wesbite zum Thema Stunden und A
 ## Steps
 Wir aben als erstes unsere Ideen auf Blatt Papier gescribbelt und danach in Figma unser Mockup erstellt. Wir haben viel gelernt was das Ui/UX Design angeht und versucht die Site so User freundlioch wie möglich zu machen.
 ![Figma Mockup](src/assets/Figma-Mockup.png)
+Als wir mit dem Coden vom Html und Css fertig waren haben wir diese mit dem Validator geprüft:
+![Validator](src/assets/validator)
 
 ## Testing
 
-(https://validator.w3.org![image](https://github.com/user-attachments/assets/e8785df7-c5bc-4cad-9e38-f5063bfe4d4a) Fotos davon hochladen
+
 
 ## Probleme
-Wir hatten Probleme mit;
+Das Grösste Problem war es die vorprogrammierten Html und Css Dateien mit Vue so zu vereinen, dass das Css stimmt. Ich (Seraina) hatte im Vorhinein das Html und Css programmiert, währenddessen hatte Kevin mit Vue angefangen. Immer als ich mit einer Seite Html fertig war, wandelte er diese in Vue um. Wir waren sehr unerfahren und dachten dieser Weg wäre einfach und gut zum zusammenarbeiten, aber das Css hat so oft nicht mit dem neuen Code übereingepasst das die gesamte Arbeit von mir nutzlos war. Am Ende haben wir es geschafft irgendwie zu integrieren, aber wir mussten viel von unserem Code weglassen und die Website anders gestalten, Funktionen und Design Elemente entfernen.
+Funktionen die nicht funktionieren:
+Übergreifen des localStorages, Projektstunden werden leider nicht im Choach Mode angezeigt.
+Team hinzufügen und entfernen funktioniert nicht.
+Searchbar ist nicht funktionabel.
 
 ## Fazit
 
-Fazit Hier
+Wir programmieren nie wieder mit Vue.
