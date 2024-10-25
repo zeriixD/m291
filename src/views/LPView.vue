@@ -33,8 +33,8 @@
                     <img src="/src/assets/avatar/avatar3.svg" alt="pfp3" />
                     <span>+1</span>
                 </div>
-                <p class="team-action-text" v-if="!joined" v-on:click="joined === true">+ zum Team hinzufügen</p>
-                <p class="team-action-text" v-if="joined" v-on:click="joined === false">- aus dem Team austreten</p>
+                <p class="team-action-text" v-if="!project.joined" v-on:click="toggleJoin(project)">+ zum Team hinzufügen</p>
+                <p class="team-action-text" v-if="project.joined" v-on:click="toggleJoin(project)">- aus dem Team austreten</p>
             </div>
         </div>
 
@@ -74,11 +74,10 @@ export default {
             projects: [],
             selectedProject: null,
             hoursInput: '',
-            joined: false,
         }
     },
     methods: {
-        fetchProjects() {
+        async fetchProjects() {
             fetch('https://api-sbw-plc.sbw.media/Project')
                 .then(response => response.json())
                 .then(data => {
@@ -87,8 +86,12 @@ export default {
                         lpHours: 0,
                         lpVerifiedHours: 0,
                         totalHours: 0,
+                        joined: false
                     }))
                 })
+        },
+        toggleJoin(project) {
+            project.joined = !project.joined
         },
         showProjectDetails(project) {
             this.selectedProject = project

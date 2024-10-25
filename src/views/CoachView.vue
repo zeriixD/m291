@@ -70,20 +70,23 @@
 
             <div id="lp-list">
                 <div id="table-headers">
-                    <span>Stunden</span>
-                    <span>Projektanzahl</span>
+                    <span id="hours-header">Stunden</span>
+                    <span id="project-header">Projektanzahl</span>
                 </div>
 
-                <div id="lernpartner" v-for="lp in users" :key="lp.id" v-on:click="toggleUserDetails(lp)">
+                <div id="lernpartner" v-for="lp in users" :key="lp.id" >
+                <!-- v-on:click="toggleUserDetails(lp)"> -->
                     <img src="/src/assets/avatar/avatar1.svg" alt="pfp-lp">
-                    <span>{{ lp.fullname }}</span>
-                    <span>{{ lp.totalHours }}</span>
-                    <span>{{ lp.projects.length }}</span>
+                    <span id="lp-name">{{ lp.fullname }}</span>
+                    <span id="lp-hours">{{ lp.totalHours }}</span>
+                    <span id="lp-projects">{{ lp.projects.length }}</span>
                     <div id="lp-expanded" v-if="expandedUsers[lp.id]">
                         <ul>
                             <li v-for="project in lp.projects" :key="project.ID">
-                                {{ project.Name }}: {{ project.lpHours }}h ({{ project.lpVerifiedHours }} davon
-                                bestätigt)
+                                <p>
+                                    {{ project.Name }}: {{ project.lpHours }}h ({{ project.lpVerifiedHours }} davon
+                                    bestätigt)
+                                </p>
                             </li>
                         </ul>
                     </div>
@@ -298,5 +301,75 @@ h4 {
 .coach-info img {
     width: 50px;
     height: 50px;
+}
+
+#searchbar {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+#searchbar input {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #53358B;
+    width: 500px;
+}
+
+#table-headers {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#hours-header {
+    margin-left: 48rem;
+    margin-right: 1rem;
+}
+
+#project-header {
+    margin-right: -1rem;
+}
+
+#lernpartner {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+#lernpartner img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+#lp-name {
+    flex: 1;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+#lp-hours {
+    font-size: 1rem;
+    color: #666;
+    margin-right: 6rem;
+}
+
+#lp-projects {
+    font-size: 1rem;
+    color: #666;
+    margin-right: 2rem;
 }
 </style>
